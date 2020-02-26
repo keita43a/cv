@@ -136,13 +136,6 @@ print_text_block(text_blocks, 'intro')
 
 
 
-Education {data-icon=graduation-cap data-concise=true}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'education')
-```
-
 
 
 Research Positions {data-icon=laptop}
@@ -150,6 +143,13 @@ Research Positions {data-icon=laptop}
 
 ```{r}
 print_section(position_data, 'research_positions')
+```
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'education')
 ```
 
 
