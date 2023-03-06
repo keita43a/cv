@@ -37,7 +37,7 @@ sup {
 /* Customize some of the sizing variables */
 :root {
   --sidebar-width: 12rem; /* Shrink sidebar width  */
-  --sidebar-background-color: #e3e3e3; /* Make sidebar blue */
+  --sidebar-background-color: #359E25; /* Make sidebar blue */
   --sidebar-horizontal-padding: 0.01in; /* Reduce sidebar padding */
   --decorator-outer-dim: 10px; /* Make position deliniating circles larger */
   --decorator-border: 2px solid #708491; /* Make timeline a blue as well*/
@@ -86,7 +86,7 @@ sup {
 
 /* Make little circle outline be a light blue */
 .decorator::after {
-  background-color: #08306b;
+  background-color: #FFCD03;
 }
 
 /* Remove the fake bullets from lists */
@@ -96,6 +96,7 @@ sup {
 
 .skill-bar {
   color: white;
+  background-color: #FFCD03;
   padding: 0.1rem 0.25rem;
   margin-top: 3px;
   position: relative;

@@ -79,7 +79,7 @@ Aside
 ================================================================================
 
 
-![logo](SNF_liggende_tekst_RGB.jpeg){width=100%}
+![](musashi_logo.jpeg){width=50% style="display: block; margin: 0 auto"}
 
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
