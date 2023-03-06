@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 library(glue)
 library(tidyverse)
+##library(googlesheets4)
 
 # ======================================================================
 # These variables determine how the the data is loaded and how the exports are
@@ -40,8 +41,8 @@ sheet_is_publicly_readable <- TRUE
 PDF_EXPORT <- FALSE
 
 
-CV_PDF_LOC <- "https://github.com/keita43a/cv/raw/master/keita_abe_cv.pdf"
-CV_HTML_LOC <- ""
+CV_PDF_LOC <- "https://github.com/keita43a/cv/keita_abe_cv.pdf"
+CV_HTML_LOC <- "https://keita43a.github.io/cv/"
 
 
 # A global (gasp) variable that holds all the links that were inserted for
@@ -78,12 +79,12 @@ Aside
 ================================================================================
 
 
-![logo](NHH_logo.png){width=100%}
+![](musashi_logo.jpeg){width=50% style="display: block; margin: 0 auto"}
 
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
 if(PDF_EXPORT){
-  glue("View this CV online with links at _{CV_HTML_LOC}_")
+  glue("View this CV online with links at _{CV_HTML_LOC}")
 } else {
   glue("[<i class='fas fa-download'></i> Download a PDF of this CV]({CV_PDF_LOC})")
 }
@@ -136,13 +137,6 @@ print_text_block(text_blocks, 'intro')
 
 
 
-Education {data-icon=graduation-cap data-concise=true}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'education')
-```
-
 
 
 Research Positions {data-icon=laptop}
@@ -150,6 +144,13 @@ Research Positions {data-icon=laptop}
 
 ```{r}
 print_section(position_data, 'research_positions')
+```
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'education')
 ```
 
 
@@ -198,6 +199,13 @@ Work in Progress {data-icon=file-word}
 
 ```{r}
 print_section(position_data, 'work_in_progress')
+```
+
+Research Funding {data-icon=coins}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'funding')
 ```
 
 Awards {data-icon=trophy}
